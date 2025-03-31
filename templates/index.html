@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.0.0/dist/full.css" rel="stylesheet">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <div class="container mx-auto px-6 py-16 text-center">
+        <h1 class="text-5xl font-bold text-primary">Book Recommender</h1>
+        <p class="text-lg text-gray-500 mt-4">Find your next favorite book based on your interests!</p>
+
+        <div class="flex flex-col items-center justify-center gap-8 mt-16">
+
+            <div class="card bg-base-200 shadow-xl p-8 w-[300px] md:w-[500px] flex flex-col justify-center">
+                <h2 class="text-2xl font-semibold ">Explore Top-Rated Books</h2>
+                <p class="text-gray-600 mt-4">Browse the Top 50 Highest-Rated Books.</p>
+                <a href="/top50" class="btn btn-primary mt-6">Explore</a>
+            
+            </div>
+
+
+            <div class="card bg-base-200 shadow-xl p-8 w-[300px] md:w-[500px] flex flex-col justify-center">
+            
+                <h2 class="text-2xl font-semibold">Find Similar Books</h2>
+                <p class="text-gray-600 mt-4">Get book recommendations based on what you've read and enjoyed.</p>
+                <a href="/recommend" class="btn btn-primary mt-6">Get Recommendations</a>
+            
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-gray-200 p-4 text-center text-black">
+        © 2025 Book Recommender. All rights reserved.
+    </div>
+
+
+</body>
+</html>

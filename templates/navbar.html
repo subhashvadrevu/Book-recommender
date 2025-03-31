@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Recommender System</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav class="bg-base-100 shadow-md sticky top-0 z-50 flex justify-center p-4">
+        <li class="list-none inline-block mx-2"><a class="btn {% if request.path == url_for('index') %} btn-primary text-white {% else %} btn-ghost font-medium hover:bg-primary hover:text-white transition-colors {% endif %} " href="{{ url_for('index')  }}">Home</a></li>
+        <li class="list-none inline-block mx-2"><a class="btn {% if request.path == url_for('top50') %} btn-primary text-white {% else %} btn-ghost font-medium hover:bg-primary hover:text-white transition-colors {% endif %} " href="{{ url_for('top50') }}">Top 50</a></li>
+        <li class="list-none inline-block mx-2"><a class="btn {% if request.path == url_for('recommend') %} btn-primary text-white {% else %} btn-ghost font-medium hover:bg-primary hover:text-white transition-colors {% endif %} " href="{{ url_for('recommend') }}">Recommend</a></li>
+        <li class="list-none inline-block mx-2"><a class="btn {% if request.path == url_for('contact') %} btn-primary text-white {% else %} btn-ghost font-medium hover:bg-primary hover:text-white transition-colors {% endif %} " href="{{ url_for('contact') }}">Contact</a></li>
+    </nav>
+</body>
+</html>
